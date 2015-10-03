@@ -1,0 +1,66 @@
+body{
+  padding: 20px;
+  background-color: #8FBADD !important;
+}
+
+#search{
+  margin-bottom: 20px;
+}
+
+.imageOfVideo{
+  width:200px;
+  height: 150px;
+  margin-bottom: 5px;
+  display: block;
+}
+.item{
+  margin: 5px 0 5px 10px;
+  padding:5px;
+  cursor: pointer;
+  display:block;
+}
+
+.main{
+  margin: 50px 0px 0 0px;
+  width: 75%;
+  margin-bottom: 25px;
+}
+
+.titleOfVideo{
+  font-weight: bold;
+  font-size: 12px;
+  display: block;
+  width: 200px;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1296px) {
+    
+    .main{
+      width: 100%
+    }
+    .item{
+      display: inline-table;
+    }
+}
+.item:hover{
+  color: #2B9FDD;
+}
+.list{
+  margin-right: 40px;
+}
+.vcenter {
+     display: flex;
+     align-items: center;
+}
+
+.chevron{
+  margin: 15px;
+  cursor: pointer;
+}
+.chevron:hover{
+  color: #2B9FDD
+}
+
+

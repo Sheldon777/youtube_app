@@ -1,0 +1,33 @@
+ <form class="form-group" ng-submit="searchVideo()" id = "form" name="myForm" novalidate>
+    <label for="exampleInputEmail1" class = "text-center center-block" >Find any video you want!</label>
+    <input type="text" required  id = "search" class="form-control" id="video" ng-model = "searchText" placeholder="Type video name!" name = "searchText">
+     <button type="submit"  class="btn btn-default center-block"
+     ng-disabled="!searchText">Search</button>
+ </form>
+ 
+
+ <div class = "conteiner">
+ 	<div class = "main  pull-left" ng-show = "videoId">
+		<iframe  width = "100%"  height="550"
+		src="{{trustSrc(videoId)}}">
+		</iframe>
+	</div>
+	<div class = "pull-right list">
+		<div class = "row">
+		 	 <div class = "col-md-5 col-md-offset-4 chevron vcenter" ng-click ="changePage('up')" ng-show = "prevPageToken">
+		 	 	<div class = "glyphicon glyphicon-chevron-up center-block text-center"></div>
+		 	 </div>
+	 	</div>
+		 <div ng-repeat = "data in items" class = "item">
+				<div class="" ng-click = "showVideo(data.id.videoId)">
+					<img class = "center-block imageOfVideo"ng-src="http://img.youtube.com/vi/{{data.id.videoId}}/0.jpg" >
+					<label class = "titleOfVideo">{{data.snippet.title}}</label>
+		 		</div>
+		</div>
+		<div class = "row">
+			<div class = "col-md-5 col-md-offset-4 chevron vcenter" ng-click ="changePage('down')" ng-show = "nextPageToken" >
+		 	 	<div class = "glyphicon glyphicon-chevron-down center-block text-center"></div>
+		 	 </div>
+	 	 </div>
+ 	</div>
+</div>
